@@ -1,0 +1,31 @@
+﻿@model FSMProduction.MVCWebUI.Models.UserListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    @if (Model.Users != null)
+    {
+        foreach (var user in Model.Users)
+        {
+            @user.UserName
+            <br/>
+
+        }
+    }
+    else
+    {
+            <p>yetki sorunu</p>
+    }
+    
+</div>
+</body>
+</html>
